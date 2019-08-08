@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @investigated.name %>
+</p>
+
+<p>
+  <strong>Lastname1:</strong>
+  <%= @investigated.lastname1 %>
+</p>
+
+<%= link_to 'Edit', edit_investigated_path(@investigated) %> |
+<%= link_to 'Back', investigateds_path %>
