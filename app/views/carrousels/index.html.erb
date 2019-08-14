@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Carrousels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Display from</th>
+      <th>Display finish</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carrousels.each do |carrousel| %>
+      <tr>
+        <td><%= carrousel.title %></td>
+        <td><%= carrousel.description %></td>
+        <td><%= carrousel.display_from %></td>
+        <td><%= carrousel.display_finish %></td>
+        <td><%= link_to 'Show', carrousel %></td>
+        <td><%= link_to 'Edit', edit_carrousel_path(carrousel) %></td>
+        <td><%= link_to 'Destroy', carrousel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Carrousel', new_carrousel_path %>

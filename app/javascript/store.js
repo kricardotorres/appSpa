@@ -43,7 +43,7 @@ export default new Vuex.Store({
     login({ commit }, user) {
       return new Promise((resolve, reject) => {
         commit('auth_request')
-        axios({ url: 'http://localhost:3000/auth/sign_in', data: user, method: 'POST' })
+        axios({ url: 'http://localhost:3000/api/auth/sign_in', data: user, method: 'POST' })
           .then(resp => { 
             const token = resp.headers['access-token']
             const user = resp.headers.uid 
@@ -85,6 +85,18 @@ export default new Vuex.Store({
           })
       })
     },
+    getCarrousels({ commit }  ){
+ 
+      const url = `http://localhost:3000/api/v1/carrousels.json`;
+    return axios.get(url).then(response => response.data);
+
+    },
+    getCards({ commit }  ){
+ 
+      const url = `http://localhost:3000/api/v1/cards.json`;
+    return axios.get(url).then(response => response.data);
+
+    },
     getInvestigateds({ commit }  ){
 
             axios.defaults.headers.common['access-token'] = localStorage.getItem('access-token')
@@ -92,19 +104,19 @@ export default new Vuex.Store({
 
             axios.defaults.headers.common['client'] = localStorage.getItem('client')
             axios.defaults.headers.common['uid'] = localStorage.getItem('user')
-      const url = `http://localhost:3000/investigateds.json`;
+      const url = `http://localhost:3000/api/v1/investigateds.json`;
     return axios.get(url).then(response => response.data);
 
     },
     getInvestigated(pk) {
-    const url = `http://localhost:3000/investigateds/${pk}.json`;
+    const url = `http://localhost:3000/api/v1/investigateds/${pk}.json`;
     return axios.get(url).then(response => response.data);
     },
 
     sign_out({ commit }  ){
       return new Promise((resolve, reject) => {
         commit('auth_request')
-        axios({ url: 'http://localhost:3000/auth/sign_out', 
+        axios({ url: 'http://localhost:3000/api/auth/sign_out', 
         headers: {
             'Content-Type': 'application/json',
         }, method: 'DELETE' })

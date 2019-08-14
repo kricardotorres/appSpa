@@ -1,78 +1,154 @@
 <template>
-  <div>
-    <div>
-  <b-button v-b-modal.modal-1>Launch demo modal</b-button>
+  <div   >
+      <div style=" margin-top: 72px;">
+        <b-carousel
+        id="carousel-1"
+        v-model="slide"
+        :interval="4000"
+        controls
+        indicators
+        background="#ababab" 
+        style="text-shadow: 1px 1px 2px #333;"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+        > <!-- Slides with img slot -->
+        <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+        <b-carousel-slide   v-for="carrousel in carrousels"  v-bind:key="carrousel.id">
+          <img
+          slot="img"
+          class="d-block img-fluid w-100" 
+          v-bind:src="carrousel.url_image"
+          alt="image slot"
+          >
+        </b-carousel-slide> 
+      </b-carousel> 
 
-  <b-modal id="modal-1" title="BootstrapVue">
-    <p class="my-4">Hello from modal!</p>
-  </b-modal>
-</div>
-  <div>
-  <b-card
-    title="Card Title"
-    img-src="https://picsum.photos/600/300/?image=25"
-    img-alt="Image"
-    img-top
-    tag="article"
-    style="max-width: 20rem;"
-    class="mb-2"
-  >
-    <b-card-text>
-      Some quick example text to build on the card title and make up the bulk of the card's content.
-    </b-card-text>
+    </div>
+    <div class="container">
+       <hr/>
+    </div> 
+  <div class="container" style="background-color: #fff" > 
+   <div class="row">
+     <div class="col-md-12">
+       <br/>
+       <h4 class="text-center" >Nuestros Servicios<b-badge> </b-badge></h4>
 
-    <b-button href="#" variant="primary">Go somewhere</b-button>
-  </b-card>
-</div>
-    <b-alert show>Default Alert</b-alert>
+       <div class="row">
+        <b-col md="4"   v-for="item in items" v-bind:key="item.id"> 
+          <b-card class="mb-2">
+           <img class="card-img-top"  v-bind:src="item.url_image"    alt="Card image cap"> 
+           <b-card-body>
+            <b-card-title>{{item.title}}</b-card-title>
+            <b-card-text>{{item.description}}</b-card-text>
+            <!--  <b-btn color="primary">Button</b-btn>  -->
+          </b-card-body>
+        </b-card>
+       </b-col>
+      </div> 
+    </div>
+   </div> 
+  </div>
+   
 
-    <b-alert variant="success" show>Success Alert</b-alert>
+  <div class="container">
+     <hr/>
+  </div> 
+    
+  <div class="container" style="background-color: #fff" >
+    <div class="row">
+      <div class="col-md-12">  
+        <br>
+        <h4  class="text-center" >Haz tu reservación aqui! <b-badge> Nuevo! </b-badge></h4>
+        <br>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br>
 
-    <b-alert v-model="showDismissibleAlert" variant="danger" dismissible>
-      Dismissible Alert!
-    </b-alert>
+      </div>
+    </div> 
+  </div>
+     
 
-    <b-alert
-      :show="dismissCountDown"
-      dismissible
-      variant="warning"
-      @dismissed="dismissCountDown=0"
-      @dismiss-count-down="countDownChanged"
-    >
-      <p>This alert will dismiss after {{ dismissCountDown }} seconds...</p>
-      <b-progress
-        variant="warning"
-        :max="dismissSecs"
-        :value="dismissCountDown"
-        height="4px"
-      ></b-progress>
-    </b-alert>
+    <div class="container">
+      <hr/>
+    </div> 
 
-    <b-button @click="showAlert" variant="info" class="m-1">
-      Show alert with count-down timer
-    </b-button>
-    <b-button @click="showDismissibleAlert=true" variant="info" class="m-1">
-      Show dismissible alert ({{ showDismissibleAlert ? 'visible' : 'hidden' }})
-    </b-button>
   </div>
 </template>
 
 <script>
   export default {
+    computed: {
+      isLoggedIn: function() {
+        return this.$store.getters.isLoggedIn;
+      }
+    },
     data() {
       return {
+        carrousels: [],
+        numberOfcarrousels:0,
+        items: [],
+        numberOfcards:0,
+        slide: 0,
+        sliding: null,
         dismissSecs: 10,
         dismissCountDown: 0,
         showDismissibleAlert: false
       }
     },
     methods: {
+      getCarrousels(){
+
+        this.$store
+        .dispatch("getCarrousels" )
+        .then((data) => {  
+          this.carrousels = data.carrousels
+          this.numberOfcarrousels= data.total_count;
+        });
+
+      },
+      getCards(){
+
+        this.$store
+        .dispatch("getCards" )
+        .then((data) => {  
+          this.items = data.cards
+          this.numberOfcards= data.total_count;
+        });
+
+      },
+      onSlideStart(slide) {
+        this.sliding = true
+      },
+      onSlideEnd(slide) {
+        this.sliding = false
+      },
       countDownChanged(dismissCountDown) {
         this.dismissCountDown = dismissCountDown
       },
       showAlert() {
         this.dismissCountDown = this.dismissSecs
-      }
-    }
+      } 
+    },
+
+    mounted() {
+      this.getCards();
+      this.getCarrousels();
+    },
   }
-</script>
+</script> 
+

@@ -1,5 +1,7 @@
 <template>
  <div>
+    <div class="row" >
+    <div class="col-md-12">
    <form class="login" @submit.prevent="login">
      <h1>Sign in</h1>
      <label>Email</label>
@@ -9,6 +11,8 @@
      <hr/>
      <button type="submit">Login</button>
    </form>
+ </div>
+ </div>
  </div>
 </template>
 

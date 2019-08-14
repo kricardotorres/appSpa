@@ -1,5 +1,6 @@
-class InvestigatedsController < ApplicationController
-        before_action :authenticate_user!
+class Api::V1::InvestigatedsController < Api::V1::BaseController
+
+  before_action :authenticate_api_user!
   before_action :set_investigated, only: [:show, :edit, :update, :destroy]
 
   # GET /investigateds
@@ -10,6 +11,7 @@ class InvestigatedsController < ApplicationController
     @investigateds = Investigated.all
     total_count = @investigateds.count
     respond_to do |format|
+      format.html {  }
       format.json { render json: { total: total_count,  investigateds: @investigateds.map { |s| {id: s.id, name:  s.name, lastname1:  s.lastname1  } } } }
     end
   end
@@ -62,8 +64,7 @@ class InvestigatedsController < ApplicationController
   # DELETE /investigateds/1.json
   def destroy
     @investigated.destroy
-    respond_to do |format|
-      format.html { redirect_to investigateds_url, notice: 'Investigated was successfully destroyed.' }
+    respond_to do |format| 
       format.json { head :no_content }
     end
   end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @carrousel.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @carrousel.description %>
+</p>
+
+<p>
+  <strong>Display from:</strong>
+  <%= @carrousel.display_from %>
+</p>
+
+<p>
+  <strong>Display finish:</strong>
+  <%= @carrousel.display_finish %>
+</p>
+
+<%= link_to 'Edit', edit_carrousel_path(@carrousel) %> |
+<%= link_to 'Back', carrousels_path %>
