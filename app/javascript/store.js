@@ -43,7 +43,7 @@ export default new Vuex.Store({
     login({ commit }, user) {
       return new Promise((resolve, reject) => {
         commit('auth_request')
-        axios({ url: 'http://calm-savannah-60738.herokuapp.com/api/auth/sign_in', data: user, method: 'POST' })
+        axios({ url: '/api/auth/sign_in', data: user, method: 'POST' })
           .then(resp => { 
             const token = resp.headers['access-token']
             const user = resp.headers.uid 
@@ -68,7 +68,7 @@ export default new Vuex.Store({
     register({ commit }, user) {
       return new Promise((resolve, reject) => {
         commit('auth_request')
-        axios({ url: 'http://calm-savannah-60738.herokuapp.com/register', data: user, method: 'POST' })
+        axios({ url: '/register', data: user, method: 'POST' })
           .then(resp => {
             const token = resp.data.token
             const user = resp.data.user
@@ -87,13 +87,13 @@ export default new Vuex.Store({
     },
     getCarrousels({ commit }  ){
  
-      const url = `http://calm-savannah-60738.herokuapp.com/api/v1/carrousels.json`;
+      const url = `/api/v1/carrousels.json`;
     return axios.get(url).then(response => response.data);
 
     },
     getCards({ commit }  ){
  
-      const url = `http://calm-savannah-60738.herokuapp.com/api/v1/cards.json`;
+      const url = `/api/v1/cards.json`;
     return axios.get(url).then(response => response.data);
 
     },
@@ -104,19 +104,19 @@ export default new Vuex.Store({
 
             axios.defaults.headers.common['client'] = localStorage.getItem('client')
             axios.defaults.headers.common['uid'] = localStorage.getItem('user')
-      const url = `http://calm-savannah-60738.herokuapp.com/api/v1/investigateds.json`;
+      const url = `/api/v1/investigateds.json`;
     return axios.get(url).then(response => response.data);
 
     },
     getInvestigated(pk) {
-    const url = `http://calm-savannah-60738.herokuapp.com/api/v1/investigateds/${pk}.json`;
+    const url = `/api/v1/investigateds/${pk}.json`;
     return axios.get(url).then(response => response.data);
     },
 
     sign_out({ commit }  ){
       return new Promise((resolve, reject) => {
         commit('auth_request')
-        axios({ url: 'http://calm-savannah-60738.herokuapp.com/api/auth/sign_out', 
+        axios({ url: '/api/auth/sign_out', 
         headers: {
             'Content-Type': 'application/json',
         }, method: 'DELETE' })
