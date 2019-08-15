@@ -4,10 +4,7 @@ import  router  from  '../router'
 import  store  from  '../store'
 import  Axios  from  'axios' 
 import BootstrapVue from 'bootstrap-vue'
-
-
-import 'bootstrap/dist/css/bootstrap.css' 
-
+ 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
