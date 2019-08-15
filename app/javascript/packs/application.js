@@ -5,6 +5,10 @@ import  store  from  '../store'
 import  Axios  from  'axios' 
 import BootstrapVue from 'bootstrap-vue'
 
+
+import 'bootstrap/dist/css/bootstrap.css' 
+
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -21,9 +25,6 @@ if (token) {
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 document.addEventListener('DOMContentLoaded', () => { 
 
