@@ -10,7 +10,16 @@ RailsAdmin.config do |config|
  
   ## == CancanCan ==
   # config.authorize_with :cancancan
-
+ config.model Article do
+    edit do
+      # For RailsAdmin >= 0.5.0
+      field :content, :ck_editor
+      # For RailsAdmin < 0.5.0
+      # field :description do
+      #   ckeditor true
+      # end
+    end
+  end
   ## == Pundit ==
   # config.authorize_with :pundit
 
