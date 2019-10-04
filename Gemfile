@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+gem 'carrierwave'
 gem 'devise'
 gem 'devise_token_auth'
 gem 'webpacker'
