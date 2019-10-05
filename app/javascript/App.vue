@@ -3,7 +3,7 @@
    
     <b-navbar toggleable="lg" type="dark" variant="info2" fixed="top" expand="true">
       <b-navbar-brand class="link-white info2" > <router-link to="/">                                                  
-        <img src="http://bleuspawellness.com/wp-content/uploads/2016/12/logobleufooter-300-201.png?70bc32&70bc32" width="55" height="35" alt=""></router-link></b-navbar-brand>
+        <img src="/logobleufooter-300-201.png?70bc32&70bc32" width="55" height="35" alt=""></router-link></b-navbar-brand>
         <b-navbar-toggle class='pull-rigth'  target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse class='align-right'   id="nav-collapse" is-nav>
@@ -39,7 +39,15 @@
   </div>
 </template>
 
+<style >
+    .card-img-top img {
 
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+
+}
+</style>
 <script>
   export default {
     computed: {

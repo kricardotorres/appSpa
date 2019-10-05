@@ -1,3 +1,2 @@
-class Card < ApplicationRecord
-	 has_one_attached :image
+class Card < ApplicationRecord 
 end

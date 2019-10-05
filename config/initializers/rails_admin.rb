@@ -10,6 +10,14 @@ RailsAdmin.config do |config|
  
   ## == CancanCan ==
   # config.authorize_with :cancancan
+ config.model Card do
+  edit do 
+    field  :title 
+    field  :description , :ck_editor
+    field :display_from
+    field :display_finish 
+  end  
+ end 
  config.model Carrousel do
   edit do 
     field  :title 

@@ -8,7 +8,7 @@ class Api::V1::CardsController < Api::V1::BaseController
     total_count = @cards.count
     respond_to do |format|
       format.html {  }
-      format.json { render json: { total: total_count,  cards: @cards.map { |s| {id: s.id, title:  s.title, description:  s.description.truncate(35), url_image: url_for(s.image)     } } } }
+      format.json { render json: { total: total_count,  cards: @cards.map { |s| {id: s.id, title:  s.title, description:  s.description     } } } }
     end
   end
 

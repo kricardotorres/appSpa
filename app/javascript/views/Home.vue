@@ -29,20 +29,20 @@
 
        <div class="row">
         <b-col md="4"   v-for="item in items" v-bind:key="item.id"> 
-          <b-card class="mb-2">
-           <img class="card-img-top"  v-bind:src="item.url_image"    alt="Card image cap"> 
+          <b-card class="mb-2" > 
+
            <b-card-body>
             <b-card-title>{{item.title}}</b-card-title>
-            <b-card-text>{{item.description}}</b-card-text>
+            <b-card-text> </b-card-text>
             <!--  <b-btn color="primary">Button</b-btn>  -->
           </b-card-body>
+           <div v-html="item.description" class="card-img-top"></div>
         </b-card>
        </b-col>
       </div> 
     </div>
    </div> 
-  </div>
-   
+  </div> 
 
   <div class="container">
      <hr/>
