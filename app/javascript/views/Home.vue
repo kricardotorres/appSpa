@@ -13,13 +13,7 @@
         @sliding-end="onSlideEnd"
         > <!-- Slides with img slot -->
         <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-        <b-carousel-slide   v-for="carrousel in carrousels"  v-bind:key="carrousel.id">
-          <img
-          slot="img"
-          class="d-block img-fluid w-100" 
-          v-bind:src="carrousel.url_image"
-          alt="image slot"
-          >
+        <b-carousel-slide   v-for="carrousel in carrousels"  v-bind:key="carrousel.id" v-html="carrousel.description"> 
         </b-carousel-slide> 
       </b-carousel> 
 

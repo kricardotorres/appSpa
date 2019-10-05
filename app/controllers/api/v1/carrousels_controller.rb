@@ -8,7 +8,7 @@ class Api::V1::CarrouselsController < Api::V1::BaseController
     total_count = @carrousels.count
     respond_to do |format|
       format.html {  }
-      format.json { render json: { total: total_count,  carrousels: @carrousels.map { |s| {id: s.id, title:  s.title,  description:  s.description, url_image: url_for(s.carrousel_image)     } } } }
+      format.json { render json: { total: total_count,  carrousels: @carrousels.map { |s| {id: s.id, title:  s.title,  description:  s.description     } } } }
     end
   end
 
