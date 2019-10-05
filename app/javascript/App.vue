@@ -38,16 +38,7 @@
     
   </div>
 </template>
-
-<style >
-    .card-img-top img {
-
-    width: 100%;  
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-
-}
-</style>
+ 
 <script>
   export default {
     computed: {
