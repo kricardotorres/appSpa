@@ -1,13 +1,15 @@
 <template>
-  <div   >
-      <div style=" margin-top: 72px;">
+  <div style="background-image: url('https://instagram.fmid1-2.fna.fbcdn.net/vp/0f28401de0233300ee12b062c17d9d70/5E29246D/t51.2885-15/e35/s1080x1080/70025765_2499835643586876_4257669694785917025_n.jpg?_nc_ht=instagram.fmid1-2.fna.fbcdn.net&_nc_cat=100');" >
+  <div class="container"   >
+      <div class="row" style=" margin-top: 60px;">
+        <div class="col-md-12">
+          
         <b-carousel
         id="carousel-1"
         v-model="slide"
         :interval="4000"
         controls
-        indicators
-        background="#ababab" 
+        indicators 
         style="text-shadow: 1px 1px 2px #333;"
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
@@ -15,11 +17,13 @@
         <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
         <b-carousel-slide   v-for="carrousel in carrousels"  v-bind:key="carrousel.id" v-html="carrousel.description"> 
         </b-carousel-slide> 
-      </b-carousel> 
+      </b-carousel>
+        </div> 
 
     </div>
+    </div>
     <div class="container">
-       <hr/>
+       <br/>
     </div> 
   <div class="container" style="background-color: #fff" > 
    <div class="row">
@@ -45,7 +49,7 @@
   </div> 
 
   <div class="container">
-     <hr/>
+     <br/>
   </div> 
     
   <div class="container" style="background-color: #fff" >
@@ -78,7 +82,7 @@
      
 
     <div class="container">
-      <hr/>
+      <br/>
     </div> 
 
   </div>

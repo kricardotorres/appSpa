@@ -19,8 +19,24 @@
     width: 100%;  
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-
+    
+ border-radius: 15px;
 }
+
+
+
+.carousel-item  p img{
+  max-width: 100%;
+
+height: auto;
+
+width: 100% !important;
+
+display: block !important;
+ border-radius: 15px;
+}
+
+
 
 footer {
 

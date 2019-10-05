@@ -14,12 +14,7 @@
           </b-navbar-nav>
 
           
-        </b-collapse>
-        <b-navbar-brand >     <a class=" nav-link  " @click="logout"  v-if="isLoggedIn">
-         <font-awesome-icon icon="lock"  /></a> 
-         
-         
-       </b-navbar-brand>
+        </b-collapse> 
 
        
        
