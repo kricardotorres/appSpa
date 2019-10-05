@@ -19,9 +19,9 @@
     width: 100%;  
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-    max-height: 170px;
+max-height: 225px;
 
-min-height: 170px;
+min-height: 225px;
  border-radius: 15px;
 }
 
@@ -48,7 +48,7 @@ footer {
   padding-top: 30px;
   padding-bottom: 30px;
   color: #fff;
-  background-color:  #5db1a6;
+  background-color:  #9cccc6;
 
 }
 .row {    margin-top: 73px;
@@ -68,3 +68,4 @@ h4{
 .link-white a{
   color: #7a868c !important;
 }
+

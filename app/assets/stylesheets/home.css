@@ -4,6 +4,37 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ 
+@font-face {
+font-family: 'GFS Artemisia Regular';
+font-style: normal;
+font-weight: normal;
+src: local('GFS Artemisia Regular'), url('/GFSArtemisia.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'GFS Artemisia Italic';
+font-style: normal;
+font-weight: normal;
+src: local('GFS Artemisia Italic'), url('/GFSArtemisiaIt.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'GFS Artemisia Bold';
+font-style: normal;
+font-weight: normal;
+src: local('GFS Artemisia Bold'), url('/GFSArtemisiaBold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'GFS Didot Bold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('GFS Didot Bold Italic'), url('/GFSArtemisiaBoldIt.woff') format('woff');
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -48,10 +79,10 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
-body {
+body { 
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+   font-family: GFS Artemisia Regular;
+   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -3718,6 +3749,7 @@ input[type="button"].btn-block {
 .card-body {
   flex: 1 1 auto;
   padding: 1.25rem;
+  text-align: center !important;
 }
 .card-title {
   margin-bottom: 0.75rem;
