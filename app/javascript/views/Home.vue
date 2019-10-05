@@ -1,7 +1,7 @@
 <template>
   <div style="background-image: url('https://instagram.fmid1-2.fna.fbcdn.net/vp/0f28401de0233300ee12b062c17d9d70/5E29246D/t51.2885-15/e35/s1080x1080/70025765_2499835643586876_4257669694785917025_n.jpg?_nc_ht=instagram.fmid1-2.fna.fbcdn.net&_nc_cat=100');" >
   <div class="container"   >
-      <div class="row" style=" margin-top: 60px;">
+      <div class="row" style=" margin-top: 95px;">
         <div class="col-md-12">
           
         <b-carousel
