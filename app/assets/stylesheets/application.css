@@ -143,7 +143,15 @@ display: block !important;
 }
 
 }
+.whatsicon {
+  background-color: #00A500; 
+    background: url('/whatsicon.png')no-repeat;
+    line-height: inherit;
 
+background-size: contain;
+text-decoration: none;
+
+}
 @media all and (min-width:0px) and (max-width: 320px) {
 .back-image{
   background-size: contain;
@@ -178,6 +186,21 @@ min-height: 225px;
  border-radius: 15px;
 }
 
+.floatthird{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+  margin-top:22px;
+}
 
 
 

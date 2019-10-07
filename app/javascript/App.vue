@@ -25,6 +25,10 @@
      <div class=" "   >
       <router-view/>
     </div>
+
+<a  class='floatthird btn-fill   btn-primary whatsicon' data-toggle="collapse" href="https://api.whatsapp.com/send?phone=529991646340" role="button" title="Whatsapp">
+      <i class="fa fa-search my-float"> </i> 
+  </a>
     <footer class="fluid-container">  
       <div class="footer-copyright text-center py-3">© 2018 Copyright:
        
