@@ -3,7 +3,7 @@
    
     <b-navbar toggleable="lg" type="dark" variant="info2" fixed="top" expand="true">
       <b-navbar-brand class="link-white info2" > <router-link to="/">                                                  
-        <img src="/logobleufooter-300-201.png?70bc32&70bc32"  width="100" height="70" alt=""></router-link></b-navbar-brand>
+        <img src="/logobleufooter-300-201.png?70bc32&70bc32"    alt=""></router-link></b-navbar-brand>
         <b-navbar-toggle class='pull-rigth'  target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse class='align-right'   id="nav-collapse" is-nav>

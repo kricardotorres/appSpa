@@ -26,7 +26,9 @@ display: block !important;
 }
 
 @media all and (min-width:801px) and (max-width: 959px) {
-
+.back-image{
+  background-size: contain;
+}
 .carousel-item  p img{
   max-width: 100%;
 
@@ -43,9 +45,19 @@ display: block !important;
 
   /* put your css styles in here */
 }
-
+.navbar-brand a img{
+    width : 100px;
+    height: 70px;
+  }
 @media all and (min-width:769px) and (max-width: 800px) {
+.back-image{
+  background-size: contain;
+}
   
+.navbar-brand a img{
+    width : 50px !important;
+    height: 35px !important;
+  }
 .carousel-item  p img{
   max-width: 100%;
 
@@ -62,7 +74,14 @@ display: block !important;
 }
 
 @media all and (min-width:569px) and (max-width: 768px) {
- 
+.back-image{
+  background-size: contain;
+}
+  
+.navbar-brand a img{
+    width : 50px !important;
+    height: 35px !important;
+  }
 .carousel-item  p img{
   max-width: 100%;
 
@@ -78,7 +97,14 @@ display: block !important;
 }
 
 @media all and (min-width:481px) and (max-width: 568px) {
- 
+.back-image{
+  background-size: contain;
+}
+  
+.navbar-brand a img{
+    width : 50px !important;
+    height: 35px !important;
+  }
 .carousel-item  p img{
   max-width: 100%;
 
@@ -95,7 +121,14 @@ display: block !important;
 }
 
 @media all and (min-width:321px) and (max-width: 480px) {
-
+.back-image{
+  background-size: contain;
+}
+ 
+.navbar-brand a img{
+    width : 50px !important;
+    height: 35px !important;
+  }
 .carousel-item  p img{
   max-width: 100%;
 
@@ -112,7 +145,14 @@ display: block !important;
 }
 
 @media all and (min-width:0px) and (max-width: 320px) {
- 
+.back-image{
+  background-size: contain;
+}
+  
+.navbar-brand a img{
+    width : 50px !important;
+    height: 35px !important;
+  }
 .carousel-item  p img{
   max-width: 100%;
 
