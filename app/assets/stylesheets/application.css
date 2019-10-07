@@ -14,6 +14,119 @@
  *= require_self
  */
 
+.carousel-item  p img{
+  max-width: 100%;
+
+height: auto;
+
+width: 100% !important;
+
+display: block !important;
+ border-radius: 15px;
+}
+
+@media all and (min-width:801px) and (max-width: 959px) {
+
+.carousel-item  p img{
+  max-width: 100%;
+
+height: auto;
+
+width: 100% !important;
+
+display: block !important;
+ border-radius: 15px;
+
+  max-height: 200px !important;
+}
+
+
+  /* put your css styles in here */
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+  
+.carousel-item  p img{
+  max-width: 100%;
+
+height: auto;
+
+width: 100% !important;
+
+display: block !important;
+ border-radius: 15px;
+
+   max-height: 200px !important;
+}
+
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+ 
+.carousel-item  p img{
+  max-width: 100%;
+
+height: auto;
+
+width: 100% !important;
+
+display: block !important;
+ border-radius: 15px;
+  max-height: 200px !important;
+}
+
+}
+
+@media all and (min-width:481px) and (max-width: 568px) {
+ 
+.carousel-item  p img{
+  max-width: 100%;
+
+height: auto;
+
+width: 100% !important;
+
+display: block !important;
+ border-radius: 15px;
+
+   max-height: 200px !important;
+}
+
+}
+
+@media all and (min-width:321px) and (max-width: 480px) {
+
+.carousel-item  p img{
+  max-width: 100%;
+
+height: auto;
+
+width: 100% !important;
+
+display: block !important;
+ border-radius: 15px;
+
+  max-height: 200px !important;
+}
+
+}
+
+@media all and (min-width:0px) and (max-width: 320px) {
+ 
+.carousel-item  p img{
+  max-width: 100%;
+
+height: auto;
+
+width: 100% !important;
+
+display: block !important;
+ border-radius: 15px;
+
+  max-height: 200px !important;
+}
+
+}
   .card-img-top img {
 
     width: 100%;  
@@ -26,17 +139,6 @@ min-height: 225px;
 }
 
 
-
-.carousel-item  p img{
-  max-width: 100%;
-
-height: auto;
-
-width: 100% !important;
-
-display: block !important;
- border-radius: 15px;
-}
 
 
 
