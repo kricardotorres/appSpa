@@ -29,7 +29,7 @@
    <div class="row">
      <div class="col-md-12">
        <br/>
-       <h4 class="text-center" >Nuestros Servicios, bienvenido a Bleu Spa, el mejor Spa en Mérida <b-badge> </b-badge></h4>
+       <h4 class="text-center" >Nuestros Servicios, bienvenido a Spa Genérico, el mejor Spa en Mérida para relajarte de lunes a viernes <b-badge> </b-badge></h4>
 
        <div class="row">
         <b-col md="4"   v-for="item in items" v-bind:key="item.id"> 
